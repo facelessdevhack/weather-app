@@ -10,8 +10,9 @@ import CityTab from '../../components/cityTab/cityTab';
 import AddCityModal from '../../pages/addCityModal/addCityModal';
 import { updatingCities } from '../../api/cities';
 import CityWeatherInfo from '../../components/cityWeatherInfo/cityWeatherInfo';
+import FavBtn from '../../components/favBtn/favBtn';
 
-function Cities(props) {
+function Cities() {
     const [search, setSearch] = useState('')
     const [tab, setTab] = useState('')
     const [index, setIndex] = useState(0)
@@ -62,7 +63,7 @@ function Cities(props) {
                     <h1>{cities[index]}</h1>
                     {fav.map(function(x) {return x; }).indexOf(cities[index]) 
                         ?
-                        <img onClick={() => favCity(unique[index])} src={star} alt='unselectedStar' className='cities_tabs_icons' />
+                        <FavBtn func={() => favCity(unique[index])} ic={star} t={tab} />
                         : 
                         <img src={startwo} alt='selectedStar' className='cities_tabs_icons' />
                     }
