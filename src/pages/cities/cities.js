@@ -14,7 +14,7 @@ import FavBtn from '../../components/favBtn/favBtn';
 
 function Cities() {
     const [search, setSearch] = useState('')
-    const [tab, setTab] = useState('')
+    const [tab, setTab] = useState('Ḩeşār-e Sefīd')
     const [index, setIndex] = useState(0)
     const dispatch = useDispatch()
     const cities = useSelector((state) => state.cityReducer.citiesList)

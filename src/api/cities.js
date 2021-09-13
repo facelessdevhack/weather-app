@@ -29,7 +29,7 @@ export const updateCities = (city) => (dispatch) => {
 
 // Reducers
 const initialState = {
-    citiesList: [],
+    citiesList: ["Ḩeşār-e Sefīd"],
     modal: false,
     favCities: []
 }
