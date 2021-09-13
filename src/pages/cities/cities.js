@@ -61,7 +61,7 @@ function Cities() {
             <div className="cities_info">
                 <div className='cities_info_topbar'>
                     <h1>{cities[index]}</h1>
-                    {fav.map(function(x) {return x; }).indexOf(cities[index]) 
+                    {fav.map(function(x) {return x; }).indexOf(cities) 
                         ?
                         <FavBtn func={() => favCity(unique[index])} ic={star} t={tab} />
                         : 
